@@ -1,60 +1,54 @@
 ---
-
+import { buttonVariants } from "@/components/ui/button";
 ---
 
 <header
   class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg"
 >
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="text-xl font-bold gradient-text">Codeflow</a>
+    <a href="/" class="text-lg font-semibold tracking-tight">Codeflow</a>
 
     <nav class="hidden items-center gap-8 md:flex">
       <a
         href="#features"
-        class="text-sm text-muted transition-colors hover:text-foreground"
+        class="text-sm text-muted-foreground transition-colors hover:text-foreground"
       >
         Features
       </a>
       <a
         href="#tech"
-        class="text-sm text-muted transition-colors hover:text-foreground"
+        class="text-sm text-muted-foreground transition-colors hover:text-foreground"
       >
         Tech
       </a>
-      <a
-        href="#download"
-        class="btn-primary-glow inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
-      >
+      <a href="#download" class={buttonVariants({ size: "sm" })}>
         Download
       </a>
     </nav>
 
     <!-- Mobile hamburger -->
     <input type="checkbox" id="nav-toggle" class="hidden" />
-    <label for="nav-toggle" class="hamburger-btn md:hidden" aria-label="Toggle navigation">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
+    <label for="nav-toggle" class="flex cursor-pointer flex-col gap-[5px] p-1 md:hidden" aria-label="Toggle navigation">
+      <span class="hamburger-line block h-0.5 w-6 bg-foreground transition-all duration-300 origin-center"></span>
+      <span class="hamburger-line block h-0.5 w-6 bg-foreground transition-all duration-300 origin-center"></span>
+      <span class="hamburger-line block h-0.5 w-6 bg-foreground transition-all duration-300 origin-center"></span>
     </label>
 
     <div class="mobile-nav absolute top-full left-0 right-0 border-b border-border bg-background/95 backdrop-blur-lg md:hidden">
       <nav class="flex flex-col gap-4 px-6 py-6">
         <a
           href="#features"
-          class="text-sm text-muted transition-colors hover:text-foreground"
+          class="text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           Features
         </a>
         <a
           href="#tech"
-          class="text-sm text-muted transition-colors hover:text-foreground"
+          class="text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           Tech
         </a>
-        <a
-          href="#download"
-          class="btn-primary-glow inline-flex w-fit items-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
-        >
+        <a href="#download" class:list={[buttonVariants({ size: "sm" }), "w-fit"]}>
           Download
         </a>
       </nav>

@@ -1,27 +1,25 @@
 ---
-
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 ---
 
-<hr class="section-divider" />
+<div class="bg-border mx-auto max-w-6xl h-px"></div>
 
 <section id="download" class="px-6 py-20">
   <div class="mx-auto max-w-6xl text-center">
-    <div
-      class="cta-glow mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-card/50 px-8 py-16"
-      style="box-shadow: 0 0 40px rgba(59,130,246,0.08), 0 0 80px rgba(139,92,246,0.05)"
-    >
-      <h2 class="animate-on-scroll mb-4 text-3xl font-bold md:text-4xl">
-        Ready to try <span class="gradient-text-heading">Codeflow</span>?
+    <div class="bg-card text-card-foreground mx-auto max-w-3xl rounded-xl border px-8 py-16 shadow-sm">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+        Ready to try Codeflow?
       </h2>
-      <p class="animate-on-scroll delay-1 mx-auto mb-10 max-w-xl text-muted">
+      <p class="mx-auto mb-10 max-w-xl text-muted-foreground">
         Download the app and start building with AI-powered tools, deep Git
         integration, and first-class GitHub support.
       </p>
 
-      <div class="animate-on-scroll delay-2 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a
           href="#"
-          class="btn-primary-glow inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
+          class={cn(buttonVariants({ size: "lg" }), "gap-2")}
         >
           <svg
             class="h-5 w-5"
@@ -43,7 +41,7 @@
           href="https://github.com/gimenete/codeflow"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-outline-glow inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-base font-medium text-foreground transition-colors hover:bg-card-hover"
+          class={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
         >
           <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
             <path
