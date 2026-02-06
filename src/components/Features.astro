@@ -41,17 +41,19 @@ const features = [
 ];
 ---
 
+<hr class="section-divider" />
+
 <section id="features" class="px-6 py-20">
   <div class="mx-auto max-w-6xl">
-    <h2 class="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
+    <h2 class="animate-on-scroll mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
       Everything you need
     </h2>
-    <p class="mx-auto mb-12 max-w-2xl text-center text-muted">
+    <p class="animate-on-scroll delay-1 mx-auto mb-12 max-w-2xl text-center text-muted">
       Powerful features designed for modern development workflows.
     </p>
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {features.map((feature) => <FeatureCard {...feature} />)}
+      {features.map((feature, index) => <FeatureCard {...feature} delay={index + 1} />)}
     </div>
   </div>
 </section>

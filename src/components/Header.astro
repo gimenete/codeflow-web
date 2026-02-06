@@ -23,10 +23,41 @@
       </a>
       <a
         href="#download"
-        class="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
+        class="btn-primary-glow inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
       >
         Download
       </a>
     </nav>
+
+    <!-- Mobile hamburger -->
+    <input type="checkbox" id="nav-toggle" class="hidden" />
+    <label for="nav-toggle" class="hamburger-btn md:hidden" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </label>
+
+    <div class="mobile-nav absolute top-full left-0 right-0 border-b border-border bg-background/95 backdrop-blur-lg md:hidden">
+      <nav class="flex flex-col gap-4 px-6 py-6">
+        <a
+          href="#features"
+          class="text-sm text-muted transition-colors hover:text-foreground"
+        >
+          Features
+        </a>
+        <a
+          href="#tech"
+          class="text-sm text-muted transition-colors hover:text-foreground"
+        >
+          Tech
+        </a>
+        <a
+          href="#download"
+          class="btn-primary-glow inline-flex w-fit items-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-hover"
+        >
+          Download
+        </a>
+      </nav>
+    </div>
   </div>
 </header>

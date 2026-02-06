@@ -3,13 +3,18 @@ interface Props {
   name: string;
   format: string;
   icon: string;
+  delay?: number;
 }
 
-const { name, format, icon } = Astro.props;
+const { name, format, icon, delay } = Astro.props;
+const delayClass = delay ? `delay-${delay}` : "";
 ---
 
 <div
-  class="flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-colors hover:bg-card-hover"
+  class:list={[
+    "flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 card-glow animate-on-scroll",
+    delayClass,
+  ]}
 >
   <div class="text-foreground" set:html={icon} />
   <div class="text-center">
