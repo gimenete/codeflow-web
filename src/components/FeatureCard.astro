@@ -4,19 +4,42 @@ interface Props {
   description: string;
   icon: string;
   delay?: number;
+  color?: string;
 }
 
-const { title, description, icon, delay } = Astro.props;
+const { title, description, icon, delay, color = "blue" } = Astro.props;
 const delayClass = delay ? `delay-${delay}` : "";
+
+const iconColorMap: Record<string, string> = {
+  blue: "icon-blue",
+  purple: "icon-purple",
+  cyan: "icon-cyan",
+  pink: "icon-pink",
+  amber: "icon-amber",
+  emerald: "icon-emerald",
+};
+
+const glowColorMap: Record<string, string> = {
+  blue: "",
+  purple: "card-glow-purple",
+  cyan: "card-glow-cyan",
+  pink: "card-glow-pink",
+  amber: "card-glow-amber",
+  emerald: "card-glow-emerald",
+};
+
+const iconColorClass = iconColorMap[color] || "icon-blue";
+const glowClass = glowColorMap[color] || "";
 ---
 
 <div
   class:list={[
     "rounded-xl border border-border bg-card p-6 card-glow animate-on-scroll",
     delayClass,
+    glowClass,
   ]}
 >
-  <div class="mb-4 text-primary" set:html={icon} />
+  <div class:list={["mb-4", iconColorClass]} set:html={icon} />
   <h3 class="mb-2 text-lg font-semibold text-foreground">{title}</h3>
   <p class="text-sm leading-relaxed text-muted">{description}</p>
 </div>

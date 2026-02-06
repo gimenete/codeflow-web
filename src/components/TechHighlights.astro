@@ -24,10 +24,10 @@ const techStack = ["Electron", "React 19", "TypeScript", "Tailwind CSS", "Vite"]
 
 <hr class="section-divider" />
 
-<section id="tech" class="px-6 py-20">
+<section id="tech" class="section-glow px-6 py-20">
   <div class="mx-auto max-w-6xl">
-    <h2 class="animate-on-scroll mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
-      Cross-platform
+    <h2 class="animate-on-scroll mb-4 text-center text-3xl font-bold md:text-4xl">
+      <span class="gradient-text-heading">Cross-platform</span>
     </h2>
     <p class="animate-on-scroll delay-1 mx-auto mb-12 max-w-2xl text-center text-muted">
       One IDE, every platform. Built with modern technologies.
@@ -40,7 +40,7 @@ const techStack = ["Electron", "React 19", "TypeScript", "Tailwind CSS", "Vite"]
     <div class="animate-on-scroll delay-4 flex flex-wrap items-center justify-center gap-3">
       {
         techStack.map((tech) => (
-          <span class="rounded-full border border-border bg-card px-4 py-2 text-sm text-muted transition-all hover:border-primary/50 hover:text-foreground">
+          <span class="tech-pill rounded-full border border-border bg-card px-4 py-2 text-sm text-muted">
             {tech}
           </span>
         ))
